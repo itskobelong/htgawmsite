@@ -12,16 +12,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'views/htgawmwebsite.html'));
 });
-app.get('/season1.html', function(req, res){
+app.get('/season1', function(req, res){
   res.sendFile(path.join(__dirname, 'views/season1.html'));
 });
-app.get('/season2.html', function(req, res){
+app.get('/season2', function(req, res){
   res.sendFile(path.join(__dirname, 'views/season2.html'));
 });
-app.get('/season3.html', function(req, res){
+app.get('/season3', function(req, res){
   res.sendFile(path.join(__dirname, 'views/season3.html'));
 });
-app.get('/season4.html', function(req, res){
+app.get('/season4', function(req, res){
   res.sendFile(path.join(__dirname, 'views/season4.html'));
 });
 //express server listen
