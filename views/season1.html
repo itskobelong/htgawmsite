@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Season 1</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js">
+	$(document).ready(function(){
+	$(window).load(function(){
+	preloaderFadeOutTime=1000;
+		function hidePreloader(){
+			var preloader=$('.spinner-wrapper');
+			preloader.fadeout(preloaderFadeOutTime);
+		}
+		hidePreloader();
+	});
+});
+		</script>
+				<div id="app"></div>
+				<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+				<script type="text/javascript" src = "season1.js"></script>
+</body>
+</html>

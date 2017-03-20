@@ -1,0 +1,30 @@
+//server.js
+//require modules
+var express = require('express');
+var path = require('path');
+//instantiate express
+var app = express();
+//set port
+app.set('port', (process.env.PORT || 5000));
+//use static files
+app.use(express.static(path.join(__dirname, 'public')));
+//express routes
+app.get('/', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/htgawmwebsite.html'));
+});
+app.get('/season1.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/season1.html'));
+});
+app.get('/season2.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/season2.html'));
+});
+app.get('/season3.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/season3.html'));
+});
+app.get('/season4.html', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/season4.html'));
+});
+//express server listen
+var server = app.listen(app.get('port'), function(){
+  console.log('Server listening on port ',app.get('port'));
+});
